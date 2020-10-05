@@ -1,26 +1,37 @@
 import 'package:flutter/material.dart';
-
 import 'petCategorySpecificScreen.dart';
+import 'submitPetDetails.dart';
 
-class HomeScreen extends StatefulWidget {
+class FosterScreen extends StatefulWidget {
   final String username;
-  HomeScreen({@required this.username});
+  FosterScreen({@required this.username});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _FosterScreenState createState() => _FosterScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _FosterScreenState extends State<FosterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: InkWell(
+          onTap: () => Navigator.pop(context),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Icon(Icons.chevron_left, color: Colors.black, size: 28),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height / 12,
+                height: 24,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32),
@@ -61,6 +72,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      EnterPetDetails(username: widget.username)));
+        },
+        child: Icon(Icons.pets),
       ),
     );
   }

@@ -8,18 +8,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () => Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (BuildContext context) => PageSwitcher(
-          username: 'Shweta Gurjar',
-        )
-      )
-    ));
+    Timer(
+        Duration(seconds: 2),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) => PageSwitcher(
+                      username: 'Shweta Gurjar',
+                    ))));
   }
 
   @override
@@ -31,9 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height / 3,
             ),
-            Image.asset(
-              "assets/images/petLogo.png"
-            ),
+            Image.asset("assets/images/petLogo.png"),
             SizedBox(
               height: MediaQuery.of(context).size.height / 3,
             )
