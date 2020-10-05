@@ -1,16 +1,14 @@
-# pets
-
-A new Flutter project.
+# Pets
+A UI mockup design implementation of a Foster/donate pets app.
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+It's easy to get started. Just plug in your device, and follow these steps:
+- If you use IDE's for flutter development
+  - Connect your device
+  - Build the application by the IDE you use for flutter development.
+  - Or run ``` flutter run --release ``` on your console to build the app.
+- If you use terminal or CMD for flutter development
+  - Connect your device, navigate to the project directory.
+  - Run ``` flutter run --release ``` on your console
+- If you want to just build the apk
+  - Run ``` flutter build apk --release ``` (for Android users)
