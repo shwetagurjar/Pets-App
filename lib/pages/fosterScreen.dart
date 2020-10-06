@@ -73,7 +73,7 @@ class _FosterScreenState extends State<FosterScreen> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.push(
               context,
@@ -81,7 +81,8 @@ class _FosterScreenState extends State<FosterScreen> {
                   builder: (BuildContext context) =>
                       EnterPetDetails(username: widget.username)));
         },
-        child: Icon(Icons.pets),
+        label: Text('Donate pets'),
+        icon: Icon(Icons.pets),
       ),
     );
   }
